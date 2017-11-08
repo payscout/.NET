@@ -19,6 +19,7 @@ Please contact you Payscout Support Representative for assistance in matching yo
 1. [Void Example](#void)
 1. [Sale Example](#sale)
 1. [Refund Example](#refund)
+1. [Responses](#responses)
 
 
 ##Auth Example
@@ -32,3 +33,24 @@ Please contact you Payscout Support Representative for assistance in matching yo
 ##Sale Example
 
 ##Refund Example
+
+##Responses
+
+1. Success JSON response
+{"status":"approved","gateway_mid":"A0***","transaction_id":"A*********Q","message":"Transaction approved","result_code":"000","extended_info":"<token></token>","cvv2_verification_code":"M","avs_code":"N"}
+
+2. Error in authentication
+
+{"status":"declined","message":"authentication-failed"}
+
+3. Error in values sent for fields
+
+{"status":"declined","message":"Bad request: Bad value for: 'account_number'"}
+
+4. Error in mandatory fields
+
+{"status":"declined","message":"Bad request: Missing properties: [account_number]"}
+
+5. Denied transactions
+
+{"status":"declined","gateway_mid":"A0***","transaction_id":"A*********F","message":"ERROR : Error ( Error ( Card expired ) while reading transaction details ) while trying to read the parameters for request 797774"}

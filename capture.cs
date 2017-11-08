@@ -16,7 +16,7 @@ namespace CodeSamples
         }
         static async Task Main()
         {
-            string payload = "client_username={yourUsername}&client_password={yourPassword}&client_token=token&processing_type=CAPTURE¤cy=USD&initial_amount=99.99&original_transaction_id=A000133RY3R&billing_invoice_number=1999";
+            string payload = "client_username={yourUsername}&client_password={yourPassword}&client_token=token&processing_type=CAPTURE&currency=USD&initial_amount=99.99&original_transaction_id=A000133RY3R&billing_invoice_number=1999";
 
             Dictionary<string, string> formData = new Dictionary<string, string>();
 
